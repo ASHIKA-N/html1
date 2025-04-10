@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign in form</title>
+<style>
+*{
+    margin: 2%;
+    padding: 0%;
+    font-size:20px;
+   
+}
+
+
+
+   
+div.si{
+  height: 580px;
+  width: 550px;
+  border: 1px solid #4CAF50;
+  border: 5px solid black;
+  outline: 5px black;
+ border-radius: 5px;
+ margin:auto;
+   
+}
+div.information {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}  
+input[type=text] {
+  width: 60%;
+  padding: 6px 20px;
+  margin: 8px ;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+ul{
+   list-style-type:none;
+   margin: 0px;
+   padding:0px;
+   overflow:hidden;
+   
+   }
+li a{
+   display:block;
+   color:blue;
+   padding:0px;
+   text-decoration:none;
+}
+table a{
+   
+   display:block;
+   color:black;
+   padding:0px;
+   text-decoration:none;
+}
+p {
+color:red;
+        }
+
+</style>
+</head>
+<body>
+<div class="si">
+<h1 style="text-align:center; font-size: 50px;">Sign in </h1>
+<form name="sign in form"action="/action_page.php">
+
+<div class="information">
+   
+   
+   <label>User name:</label><input type="text" id="username" name="fname" value="Your name" required ><br>
+   <p id="cname"></p>
+     
+  <label >Email:</label><input type="email" id="email" name="fname"  placeholder="name@domain.com" /><br>
+  <p id="res"></res>
+  <label for="password" style="color:black;">Password: </label><input type="password" id="password"><br>
+  <p id="result"></p>
+  <label for="password">Confirm password:</label><input id="confirmpassword" type="password" name="remember">
+  <p id="cpwd"></p>
+  <label><ul><li style="color:#0000ff;"> <a href=#forgot password>Forgot password?</li></ul></label>
+ 
+</div>  
+
+<div class="button">
+   <button type="button" onclick="myFunction()" style="width:100%; height:42px; background-color:royalblue;">Sign in</button>
+</div>
+<div class="Google">
+     <table>
+      <tr> <td><img src="https://logos-world.net/wp-content/uploads/2020/09/Google-Symbol.png" style="width:42px;height:22px;"></td><td><a href="#" style="text-decoration:none;">ContinueWithGoogle</a></td>
+</table>
+</div>
+</form>
+</div>
+<script>
+function myFunction() {
+ 
+  let x = document.getElementById("username").value;
+  let y=document.getElementById("password").value;
+  let z=document.getElementById("confirmpassword").value;
+  let text;
+  if (isNaN(x)) {
+    text = "Valid";
+  }
+  else {
+    text = "Invalid";
+  }
+  document.getElementById("cname").innerHTML = text;
+  let msg;
+  if ( y !== x ){
+     msg="Password and confirm password are not equal";
+  }
+  else{
+    msg="Valid";
+  }
+  document.getElementById("cpwd").innerHTML=msg;
+  const password = document.getElementById('password').value;
+  const resultElement = document.getElementById('result');
+           
+           
+const strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*(),.?":{}|<>]).{12,}$/;
+const weakRegex = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/;
+           
+if (strongRegex.test(password)) {
+    resultElement.textContent = 'Strong Password';
+    resultElement.className = 'result strong'; }
+           
+else if (weakRegex.test(password)) {
+       resultElement.textContent = 'Weak Password';
+       resultElement.className = 'result weak';
+            }
+           
+else {
+  resultElement.textContent = 'Weakest Password';
+  resultElement.className = 'result weakest';
+            }
+ document.getElementById('email').addEventListener('input', function() {
+ const email = this.value;
+ const resultElement = document.getElementById('res');
+ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+if (emailRegex.test(email)) {
+        resultElement.textContent = 'Valid Email Format';
+        resultElement.className = 'result valid';
+            }
+ else {
+           resultElement.textContent = 'Invalid Email Format';
+           resultElement.className = 'result invalid';
+            }
+        });
+}
+</script>
+</body>
+</html>
+
+
+
