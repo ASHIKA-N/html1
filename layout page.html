@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>layout page</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+   padding-top:10px;
+   padding-bottom:30px;
+   background-color:blue;
+   color:white;
+   text-align:center;
+ }
+
+h1{
+ font-size: 130px;}
+}
+
+nav {
+    display: inline-block;  
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding-top: 40px;
+    display: flex;      
+   justify-content: center;  }
+
+nav ul li {
+    margin: 0 15px;  
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+}
+nav ul li a:hover {
+    color:#ffe5b4;  
+    text-decoration: underline;  
+}
+article{
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    padding-bottom:30px;
+    padding-top:30px;
+   padding-right:30px;
+   padding-left:30px; 
+    margin: 20px right; 
+    margin-bottom:40px;
+    margin-left:20px;
+    margin-top:40px;
+    max-width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size:20px; 
+   background-color:black;
+   color:white;
+}
+article {
+   aspect-ratio: 7/3;
+  width:60%;
+  border: solid black 2px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  writing-mode: horizontal-rl;
+  scroll-padding-inline-start: 20px;
+  font-size:30px;
+}
+aside{
+ box-shadow:0 4px 6px rgba(0,0,0.1);
+font-size:30px;
+ border-radius:8px;
+ max-width:400px;
+position:absolute;
+position: absolute;
+  top: 300px;
+  right: 5px;
+  
+  height: 500px;
+  border: 3px solid #73AD21;
+  list-style-type:none; }
+
+
+
+
+</style>
+</head>
+<body>
+  <header>
+    <h1>AU Course</h1>
+     <div class="bar">
+      <nav>
+        <ul>
+         <li><a href="#1">Home</a></li>
+         <li><a href="#2">My learning</a></li>
+         <li><a href="#3">Progress</a></li>
+         <li><a href="#4">Completed Course</a> </li>
+        </ul>
+      </bar>
+     </nav>
+ </header>
+<section>
+    <article id="a">
+    <img src="https://pratikgaikwad-portfolio-af37e0.netlify.app/static/media/pngtree-programmer-it-developer-png-image_13520483.b2f2a5c1da0cac34dd45.png" style="height:300px; width:500px; display: flex; justify-content: center; align-items: center;  ">
+A programming course provides comprehensive training in various coding languages . It covers both theoretical concepts and practical applications, helping you understand syntax, logic, and problem-solving techniques. These courses often include hands-on projects, real-world scenarios, and mentorship from experienced instructors, ensuring a well-rounded learning experience. By completing a programming course, you can open doors to numerous career opportunities in fields like software development, data analysis, and artificial intelligence. The skills you acquire will enable you to develop software applications, analyze data, and tackle complex problems efficiently, making you a valuable asset in the tech industry.</article>
+     
+    <article id="b">
+     <img src="https://www.thewatchtower.com/assets/images/blog_images/top-5-well-paying-tech-jobs-without-coding-for-freshers1693814273.jpg" style="height:300px; width:500px; display: flex; justify-content: center; align-items: center;  ">
+Taking a non-programming course offers a diverse range of knowledge and skills that can be applied across various professions. These courses often focus on subjects such as business management, psychology, literature, or healthcare, providing a deep understanding of the chosen field. Through lectures, group discussions, and practical assignments, students gain insights into both theoretical frameworks and real-world applications. Additionally, non-programming courses frequently include opportunities for networking with industry professionals, enhancing career prospects. By completing a non-programming course, you can develop critical thinking, communication, and analytical skills, making you a versatile and valuable asset in any industry.</article>
+     <img src>
+    <aside>
+       <ul>
+           <li>Programming languages</li>
+            <li>Non Programming languages</li>
+       </ul>
+    </aside>
+</section>
+<footer>@contact</footer>
+</body>
+</html>
